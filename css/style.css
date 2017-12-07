@@ -134,7 +134,7 @@ header{
 .team a{
     max-width: 350px;
     margin: auto;
-    box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 5px #000 inset;
     padding: 20px 10px;
     color: #222;
 }
@@ -262,4 +262,17 @@ header{
     animation-name: slideUp;
     visibility: visible;
     animation-duration: 1s;
+}
+
+.portfolio .portfolio-slider .hover{
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease;
+    background: rgba(0,0,0,0.5) url('assets/favicon.png') no-repeat center;
+}
+.portfolio .portfolio-slider li:hover .hover{
+    height: 100%;
 }
