@@ -15,5 +15,33 @@ $(document).ready(function () {
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 2000);
     });
-
+    
+    
+    if($('.bxslider').length > 0){
+        $('.lead-slider').bxSlider();
+    };
+    
+    function animation(){
+        var windowHeigh = $(window).height();
+        var scroll = $(window).scrollTop();
+        $('.animation').each(function(){
+            var pozicija = $(this).offset().top;
+            var animacija = $(this).attr('data-animation');
+            
+            if(pozicija < (scroll + windowHeigh - 100)){
+                $(this).addClass(animacija);
+            }else{
+                $(this).removeClass(animacija);
+            }
+        });
+    }
+    
+    animation();
+    
+    $(window).scroll(function(){
+        animation();
+    });
+    
+    
+    
 });
