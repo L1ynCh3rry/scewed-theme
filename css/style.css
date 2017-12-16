@@ -263,7 +263,6 @@ header{
     visibility: visible;
     animation-duration: 1s;
 }
-
 .portfolio .portfolio-slider .hover{
     position: absolute;
     height: 0;
@@ -276,7 +275,6 @@ header{
 .portfolio .portfolio-slider li:hover .hover{
     height: 100%;
 }
-
 footer .social a{
     display: inline-block;
     width: 40px;
@@ -289,6 +287,8 @@ footer .social .fa{
     line-height: 40px;
     font-size: 26px;
     color: #fff;
+    transition: 1s ease;
 }
-
-
+footer .social a:hover .fa{
+    -moz-transform: rotateX(360deg);
+}
